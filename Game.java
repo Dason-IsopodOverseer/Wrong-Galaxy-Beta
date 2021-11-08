@@ -24,7 +24,7 @@ public class Game extends Canvas {
     private boolean restart = false;
     public final int TILESIZE = 50; // width and height of all tiles
     private double amountScrolled = 0; // constantly decreases to make the platforms rise
-    private double scrollSpeed = 0; // speed that amountScrolled increases at
+    private double scrollSpeed = -20; // speed that amountScrolled increases at
     private boolean superScroll = false; // when luke is in the bottom 2/10 of the screen, scroll faster
     private boolean scrolling = true; // true if not at the bottom of a level
     private int lvl = 1; // current level
@@ -50,7 +50,7 @@ public class Game extends Canvas {
     public boolean facingRight = true; // when the right arrow was pressed more recently than the left arrow
     public int health = 3; // player's remaining health
     private boolean gameStarted = false; // when a level of the game is underway
-    private final int LASTLEVEL = 6; // number of levels in the game
+    private final int LASTLEVEL = 9; // number of levels in the game
     private TileMap map = new TileMap("level1.txt", this); // used to draw platforms and initiate enemies
     public final int GAMEWIDTH = TILESIZE * map.getWidth(); // width of game window in px 
     public final int GAMEHEIGHT = 900; // height of game window in px
@@ -239,7 +239,9 @@ public class Game extends Canvas {
     	        		((EnemyEntity) entities.get(i)).moveBack();
     	        		if (((EnemyEntity) entities.get(i)).health <= 0) {
     	        			// if an enemy is killed
-    	        			forceAttackInterval += 500;
+    	        			if (forceAttackInterval / 30 < (GAMEWIDTH - 20)) {
+    	        				forceAttackInterval += 500;
+    	        			}
     	        			deadEnemies.add(entities.get(i));
     	        			redBarCountdown = REDDURATION;
     	        		} // if
@@ -251,7 +253,9 @@ public class Game extends Canvas {
     	        } else if (entities.get(i).collidesWith(luke) && entities.get(i) != luke) {
 	        		// if an enemy hits luke
     	        	health--;
-	        		hearts[health] = lostHeart;
+    	        	if (health > -1 && health < 3) {
+    	        		hearts[health] = lostHeart;
+    	        	}
 	        		luke.collidedWith(entities.get(i));
 	        		lastPause = System.currentTimeMillis();
 	        		luke.pauseMovement = true;		
@@ -360,9 +364,9 @@ public class Game extends Canvas {
  			} // if
  			
  			// see if luke is dead
- 			if (health == 0) {
+ 			if (health <= 0) {
  				lose();
- 			} else if ((luke.getY() + amountScrolled) < 0 && luke.isTileBelow(delta)) {
+        	} else if ((luke.getY() + amountScrolled) < 0 && luke.isTileBelow(delta)) {
             	lose();
             } // if
  			
@@ -388,6 +392,8 @@ public class Game extends Canvas {
 	    gameStarted = false;
 		entities.clear();
 		entities.add(luke);
+		luke.x = 0;
+        luke.y = 0;
 		play(lvl);
 		scrolling = true;
 	    health = 3;
@@ -398,8 +404,6 @@ public class Game extends Canvas {
         luke.pauseMovement = false;
         amountScrolled = 0;
         superScroll = false;
-        luke.x = 0;
-        luke.y = 0;
         restart = false;
         paused = false;
 		
@@ -451,7 +455,7 @@ public class Game extends Canvas {
 	private void levelTransition(Graphics2D g) {
 		
 		// draw level transition screen
-		Sprite lvlTScreen = (SpriteStore.get()).getSprite("screens/lvlt" + lvl + ".png"); //XXX
+		Sprite lvlTScreen = (SpriteStore.get()).getSprite("screens/lvlt" + lvl + ".png"); 
         lvlTScreen.draw(g, 0, 0);
 		
         strategy.show();
@@ -534,9 +538,8 @@ public class Game extends Canvas {
 			clip.close();
 		} catch (Exception e) {}
 		
-		if (song == 0) {
-			playSound("wars-theme.wav");
-		} else if (song == 1) {
+		// select a song to play
+		if (song == 1) {
 			playSound("into-trap.wav");
 		} else if (song == 2) {
 			playSound("ocampa.wav");
@@ -548,7 +551,13 @@ public class Game extends Canvas {
 			playSound("into-trap-fast.wav");
 		} else if (song == 6) {
 			playSound("borg-take-picard.wav");
-		} // else if
+		} else if (song == 7) {
+			playSound("klingon-song.wav");
+		} else if (song == 8) {
+			playSound("ocampa.wav");
+		} else {
+			playSound("wars-theme.wav");
+		}
 	} // play
 	
 	// play a song

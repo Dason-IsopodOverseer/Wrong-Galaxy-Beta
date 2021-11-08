@@ -13,9 +13,7 @@
     protected Sprite sprite; // this entity's sprite
     protected double dx; // horizontal speed (px/s)  + -> right
     protected double dy; // vertical speed (px/s) + -> down
-    //protected int left; // location of the left edge of the entity
     protected double right; // location of the right edge of the entity
-    //protected int top; // location of the top edge of the entity
     protected double bottom; // location of the bottom edge of the entity
     protected TileMap map; // current tile map
     protected Game game; // entity's copy of current game
@@ -32,7 +30,6 @@
     public boolean attacking = false;
 
     // the following variables control animations for this entity
-   // private boolean animated = false; XXX
 	private String[] moveLeft = new String[4]; // array of images for moving left
 	private String[] moveRight = new String[4]; // array of images for moving right
 	private String[] attackLeft = new String[3]; // array of images for attacking left
@@ -204,9 +201,7 @@
       */
      public void move(long delta) {
     	 // set location of tile edges
-    	 //left = (int) x;
          right = x + sprite.getWidth();
-         //top = (int) y;
          bottom = y + sprite.getHeight();
 
          // check if entity is being force pushed
@@ -272,9 +267,10 @@
          	dy = -dy;
          	this.stopJumping();
          // check if it'll hit a tile below when moved
-         } else if (isTileBelow(delta)) { //&& (!game.getJumping() || !(this instanceof LukeEntity))) {
+         } else if (isTileBelow(delta)) {
         	 y = ((int) (bottom + ((delta * dy) / 1000) + 1) / tileSize) * tileSize - sprite.getHeight() - 1;
              dy = 0;
+        	 
          } // else if
     	 
     	 // update location of entity based on move speeds
@@ -343,38 +339,23 @@
 
          // if entity's top-left or top-right corner is in a tile
          return isTileAt(right, (y + (delta * dy) / 1000 - 1)) || 
-        		 isTileAt(x, (y + (delta * dy) / 1000 - 1)); //|| 
-        		 //map.getTile(right / tileSize, top / tileSize) != null || 
-        		// map.getTile(left / tileSize, top / tileSize) != null;
+        		 isTileAt(x, (y + (delta * dy) / 1000 - 1));
      } // isTileAbove
      
    //isTileBelow: returns true if entity would hit a tile below
      protected boolean isTileBelow(long delta) {
      	
      	// if entity's bottom-left or bottom-right corner is in a tile
-     	//try {
      		return isTileAt (right, (bottom + (delta * dy) / 1000 + 1)) ||
-     				isTileAt(x, (bottom + (delta * dy) / 1000 + 1)); //||
-     				//map.getTile(right / tileSize, bottom / tileSize) != null || 
-     				//map.getTile(left / tileSize, bottom / tileSize) != null;
-     	//} catch (Exception e) {
-     		//return true;
-     	//}
-     	
+     				isTileAt(x, (bottom + (delta * dy) / 1000 + 1)); 
      } // isTileBelow
      
    //isTileLeft: returns true if entity would hit a tile left
      protected boolean isTileLeft(long delta) {
          
-     	// if entity's top-left or bottom-left corner is in a tile
     	 //try {
           return isTileAt((x + (delta * dx) / 1000 - 1), y) || 
-        		  isTileAt((x + (delta * dx) / 1000 - 1), bottom); //|| 
-        		  //map.getTile(left / tileSize, top / tileSize) != null || 
-        		  //map.getTile(left / tileSize, bottom / tileSize) != null;
-    	 //} catch (Exception e){
-    		 //return true;
-    	 //}
+        		  isTileAt((x + (delta * dx) / 1000 - 1), bottom);
      } // isTileLeft
      
    //isTileRight: returns true if entity would hit a tile right
@@ -383,12 +364,7 @@
      	// if entity's top-right or bottom-right corner is in a tile
      	//try {
      		return isTileAt((right + (delta * dx) / 1000 + 1), y) || 
-     				isTileAt((right + (delta * dx) / 1000 + 1), bottom);//|| 
-     				//map.getTile(right / tileSize, top / tileSize) != null || 
-     				//map.getTile(right / tileSize, bottom / tileSize) != null;
-     	//} catch (Exception e) {
-     		//return true;
-     	//}
+     				isTileAt((right + (delta * dx) / 1000 + 1), bottom);
      } // isTileRight
 
     /* draw

@@ -6,8 +6,7 @@
  * below (for level transitions)
  */
 
-public class LukeEntity extends Entity
-{   
+public class LukeEntity extends Entity {   
     
 	// constructor
     public LukeEntity(final Game g, final String r, final int newX, final int newY) {

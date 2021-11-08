@@ -32,7 +32,6 @@ public abstract class EnemyEntity extends Entity {
 			} else if (isTileAt((x - 31), bottom) || isTileAt(( x - 31), y)) {
 				// if the enemy would hit a tile to the left
 				x = ((int) (x - 30) / game.TILESIZE * game.TILESIZE) + game.TILESIZE;
-				System.out.println("left");
 			} else {
 				x = x - 30;
 			} // else
@@ -46,7 +45,6 @@ public abstract class EnemyEntity extends Entity {
 			} else if (isTileAt(this.x + this.getWidth() + 31, bottom) || isTileAt((this.x + this.getWidth() + 31), y)) {
 				// if enemy would hit a tile
 				x = (int) (this.x + this.getWidth() + 30) / game.TILESIZE * game.TILESIZE - this.getWidth();
-				System.out.println("right");
 			} // else if
 			else {
 				x = x + 30;

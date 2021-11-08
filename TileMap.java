@@ -1,3 +1,10 @@
+/* Program: Wrong Galaxy
+ * Date: November 7, 2021
+ * Authors: Dason Wang, Carter Cranston, Emily Wang
+ * Purpose: defines the attributes and behaviour of tilemaps used for the game
+ * 
+ */
+
 import java.io.*;
 import java.util.ArrayList; // import the ArrayList class
 
@@ -87,24 +94,6 @@ public class TileMap {
 		            case 'J':
 		            	tiles[x][y] = tileSprite[9];
 		            	break;
-		            case 'K':
-		            	tiles[x][y] = tileSprite[10];
-		            	break;
-		            case 'L':
-		            	tiles[x][y] = tileSprite[11];
-		            	break;
-		            case 'M':
-		            	tiles[x][y] = tileSprite[12];
-		            	break;
-		            case 'N':
-		            	tiles[x][y] = tileSprite[13];
-		            	break;
-		            case 'O':
-		            	tiles[x][y] = tileSprite[14];
-		            	break;
-		            case 'P':
-		            	tiles[x][y] = tileSprite[15];
-		            	break;
 		            case 'k':
 		            	tiles[x][y] = null;
 						game.entities.add(new KlingonEntity(game, "kling", (x * TILESIZE), (y * TILESIZE)));
@@ -122,9 +111,9 @@ public class TileMap {
 						game.entities.add(new BorgEntity(game, "queen", (x * TILESIZE), (y * TILESIZE)));
 		            default:
 		            	tiles[x][y] = null;
-	            }
-	        }
-	    }
+	            } // switch
+	        } // for
+	    } // for
 		return tiles;
 	}
 	
