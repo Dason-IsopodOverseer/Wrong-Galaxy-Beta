@@ -23,17 +23,17 @@ public class KlingonEntity extends EnemyEntity {
     
     // moves the klingon
     public void move(long delta) {
-    	// counter increments every 50 frames
-    	if (frame % 50 == 0) {
+    	// counter increments every 10 frames
+    	if (frame % 10 == 0) {
     		count++;
-    	} if (count > 100) {
+    	} if (count > 200) {
     		count = 0;
     	} // if
     	
-    	// end the jump after 500 game loops
+    	// end the jump after 200 game loops
     	if (jumping == true) {
     		jumpCount++;
-    	} if (jumpCount > 500) {
+    	} if (jumpCount > 200) {
     		dy = fallingSpeed;
     		jumping = false;
     		jumpCount = 0;
@@ -51,8 +51,8 @@ public class KlingonEntity extends EnemyEntity {
 	        		dx *= -1;
 	    		} // if
 	    		
-	    		// dahar masters jump every 5000 game loops
-	    		if (isMaster && count >= 100 && this.isTileBelow(delta)) {
+	    		// dahar masters jump every 2000 game loops
+	    		if (isMaster && count >= 200 && this.isTileBelow(delta)) {
 	        		dy = -400;
 	        		jumping = true;
 	        	} // if

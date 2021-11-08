@@ -16,7 +16,7 @@ public class BorgEntity extends EnemyEntity {
         if (type.equals("queen")) {
         	isQueen = true;
         	health = 3;
-        	dx = 12.5; // queen is slower than drones
+        	dx = 50; // queen is faster than drones
         } // if
     } // constructor
     
@@ -39,8 +39,8 @@ public class BorgEntity extends EnemyEntity {
 				dx *= -1;
 			} // if
 			
-			// queen spawns a drone once every 6000 game loops
-			if (count % 10 == 0) {
+			// queen spawns a drone once every 4800 game loops
+			if (count % 8 == 0) {
 				count = 0;
 				Entity b = new BorgEntity(game, "borg", this.getX(), this.getY());
 				game.entities.add(b);
