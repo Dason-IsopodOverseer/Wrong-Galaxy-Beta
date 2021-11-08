@@ -1,0 +1,53 @@
+Map file for tile-based game
+(Lines that start with '#' are comments)
+(Lines that start with '*' are filled with spaces)
+(Space) Empty tile
+
+TILE NOTATION
+@ = LEVEL TRANSITION TILE
+
+BORG TILES
+A = normal tile
+B = up tile
+C = left tile
+D = left corner tile
+E = right tile
+F = right corner tile
+G = green nanite tile
+H = black assimilation tile
+I = queen tile
+J = queen chamber tile
+K = energy tile
+L = undecided
+
+KLINGON
+M = normal tile
+N = up tile
+O = 
+P = 
+Q = 
+R = 
+S = 
+T =
+U =
+V =
+W = 
+X = 
+Y = 
+Z = 
+
+
+ENEMY NOTATION
+b = borg enemy
+k = klingon enemy
+q = borg queen
+m = klingon dahar master
+
+WHEN WRITING NEW LEVELS, DO NOT USE TAB FOR SPACES!
+MAKE SURE NO ROGUE SPACES, OR ELSE GAME BREAKS!!!
+
+Other tips
+- all lines must be 28 blocks long
+- level height is variable
+- when spawing enemies, place them 1 tile above the platform they are upposed to start on
+- player is 64 px tall, so make sure all passages have a minimum hieght of 2 tiles. 
