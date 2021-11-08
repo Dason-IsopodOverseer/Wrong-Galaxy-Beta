@@ -1,0 +1,42 @@
+############################
+          b          b      
+*
+          BB         BB     
+     bb    b    bb          
+*
+BBBBBHHHHBBBBBHHHHBBBBBF    
+*
+           m            k   
+   AAAAAAA   AAAAAA   AAAAAA
+   AAAAAAEAAACAAAAEAAACAAAAA
+   AAAAAAAAAAAKKKKAAAAAAAAAA
+*
+*
+A               A   b       
+A  bb A  m      A      A    
+      A    AAAAAAAAAAAAA    
+AAAAAAAAAAAAAAAAAAAAAAAA    
+               k       A    
+                       A    
+    m k       BBBBB    A    
+                       A    
+   BBBBBB              A    
+                       A    
+*
+      b q       b           
+*
+  B  BBBBBB  BBBBBBBBBBBBBBB
+  AAAAAAAAAAAAAAAAAAAAAAAAAA
+*
+*                 m         
+AAAAAAA        AAAAAAA      
+      A        A     A      
+          A                 
+          A                 
+         bqb                
+*
+AAAAA AABBBBBBAAAAAB ABBBAAA
+*
+*
+          A   A             
+AAAAAAAAAAA@@@AAAAAAAAAAAAAA

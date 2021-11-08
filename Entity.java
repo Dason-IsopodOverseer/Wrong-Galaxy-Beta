@@ -420,11 +420,11 @@
      	boolean hit = false;
       	if (bottom + 20 > other.bottom && y - 20 < other.y) {
       		if (isFacingRight) {
-          		if (other.x <= right + 15 && other.x > x + 10) {
+          		if (other.x <= right + 50 && other.x > x + 5) {
           			hit = true;
           		} // if
           	} else {
-          		if (other.right >= x - 15 && other.right < x - 10) {
+          		if (other.right >= x - 50 && other.right < x - 5) {
           			hit = true;
           		} // if
           	} // else

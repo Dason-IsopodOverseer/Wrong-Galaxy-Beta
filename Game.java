@@ -237,7 +237,6 @@ public class Game extends Canvas {
     	        		// if luke hits an enemy with his lightsaber
     	        		((EnemyEntity) entities.get(i)).health--;
     	        		((EnemyEntity) entities.get(i)).moveBack();
-    	        		System.out.println("Hit detected! Enemy health: " + ((EnemyEntity) entities.get(i)).health);
     	        		if (((EnemyEntity) entities.get(i)).health <= 0) {
     	        			// if an enemy is killed
     	        			forceAttackInterval += 500;
@@ -346,7 +345,7 @@ public class Game extends Canvas {
  			// check if luke can use the force
  			if (forcePressed && (System.currentTimeMillis() - lastForceAttack > forceAttackInterval)) {
  				lastForceAttack = System.currentTimeMillis();
- 				
+ 				playSound("push.wav");
  				// push away each enemy in front of luke
  				for (int i = 0; i < entities.size(); i++) {
  					Entity enemy = entities.get(i);

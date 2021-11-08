@@ -48,13 +48,14 @@ public class TileMap {
 	
 	// fills sprite array with appropriate tiles (based on string [] input)
 	private Sprite[][] fillMap() {
-	    // begin to parse!
+		
+	    // begin to parse
 	    for (int y = 0; y < height; y++) {
 	        for (int x = 0; x < width; x++) {
 	        	String line = tileConfig.get(y);
 	            char ch = line.charAt(x);
 	            
-	            // check if the char represents tile A, B, N, etc.
+	            // check if the char represents tile A, B, c, etc.
 	            switch (ch) {
 		            case '@':
 		            	tiles[x][y] = tileSprite[0];

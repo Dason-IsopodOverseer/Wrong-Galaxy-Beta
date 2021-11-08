@@ -1,20 +1,32 @@
 *
 *
+     AAAAAAAAAAAAAAAA  AAAAA
+     BBBBBBBBBBBBBAAA  BBBBB
+*
+*
+B            b              
+BBBBBBBBBBBBBBBBB AAA  BBBBB
+*
+B                           
+AAAAAAAAAA  AAAAAAAAA BBBBBB
+GGGGGGGGG              GGGGG
+AAAAAAAAAA        AAA  BBBBB
+BBBBBBBBBBBBBBBBB AAA  BBBBB
+*
+    b b      b           b  
+*
+A AAAAAAAAAAAAAAAAAAAAAAAAAA
 *
 *
 *
 *
+            q               
+CBBBBBBBBBBBBBBBBBBBBD  FBBE
+HHHHHHHHHHHHHHHHHHHHHD  FHHH
+*
+B                           
+AAAAAAAAAA  AAAAAA AAAAAAAAA
 *
 *
-*
-*
-*
-*
-*
-*
-*
-*
-*
-*
-*
-AAAAAAAAAAAAAA@@@AAAAAAAAAAA
+            b               
+HAAAAAAAAAAAAAAA@@AAAAAAAAAH
