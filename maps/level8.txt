@@ -1,39 +1,42 @@
+############################
+              k             
 *
 *
 *
-AAAAAAAAA          AAAAAAAAA
-AAAAAAGGG          GGGAEAAAA
-A AAFAAGG          GG GEAAAA
-AAAAA GGG        k GGGGEAAAE
-       GGAAAAA     GGAAAAAAA
-       GGAAAAA   AAGG AAAA  
-       GG  b       GGAA     
-       GG          GGGG     
-       GG          GG       
-       GG  AAAAAAAAGG       
-       GG  AAAAAAAGGG       
-       GG       AAAGG       
-       GG          GG       
-       GG          GG       
-       GGAA        GG       
-       GG          GG       
-       GG          GG       
-       GG          GG       
-       GG     A    GG       
-       GG     AAAAAGG       
-       GG          GG       
-       GG       m  GG       
-       GG       AA GG       
-       GG       A  GG       
-       GGA     AAA GG       
-       GGAAAAAAA   GG       
-       GG          GG       
-       GG                   
-       GG                   
-BBBBBBBAABBBBBBBBBBBBBF  DBB
-AAAAAAAAAAAAAAAAAAAAAAE  CAA
-AAAAAAAAAAAAAAAAAAAAAAE  CAA
-                         m  
+    AAAAAAAAA               
+AAAA                        
+      k          k          
+                       BBBBB
+     BBB        BBB    E    
+     JJJ        JJJ         
+B                           
+ B    m                     
+  B                         
+   BBBBBF                   
+        E             AAA  A
+        E          AAAAAA  A
+        AAAAAAAAAAAAAAAAA  A
+                       AA  A
+                       AA  A
 *
 *
-BBBBBBBBBBBBBB@@@BBBBBBBBBBB
+*
+     A                 AAAAA
+     A   BBB           AAAAA
+     A   HHH               A
+     A      k  BBB         A
+     Ak k      HHH         A
+     A     AAA             A
+  BBBBBBBBBBBBBBBBBBBBBBBBBA
+*
+*
+     m                      
+*
+AAAAAAAAAA      m      AA   
+                       AA   
+               AAAAAA   A   
+                        A   
+       AAAAA            A   
+  kk                    A   
+                        A   
+AAAAAAAAAAAAAAAAAAAAAAAAA@@@

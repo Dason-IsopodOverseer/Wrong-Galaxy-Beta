@@ -1,25 +1,25 @@
 ############################
 *
-                        m   
+                            
                             
        k              BBBBBB
                       AAAAAA
-AAAAAAABBF                  
-AAAAAAAAAAAABBF             
+ AAAAAABBF                  
+ AAAAAAAAAAABBF             
           AAAAAAAAABBBBF    
-    k             k    E    
+    k                  E    
                             
-  AAAAAAAAAAAF DAAAAAAAAAAAA
+  AAAAAAAAAAAF DAAAA      AA
   AAAAAAAAAAAE CAAAAAAAAAAAA
   AAAAAAAAAGGE CGGAAAAAAAAAA
-  AAAAAAAAG  k k  GAAAAAAAAA
-  AAAAAAAAG       GAAAAAAAAA
+      AAAAG  k k  GAAAAAAAAA
+        AAG       GAAAAAAAAA
           AAAAAAAAAAAAAAAAAA
 *
 BBB                         
-AAA     BBB                 
-        AAA     AAAAAAAA    
-                A           
+AAA   BBBBB                 
+      AAAAA     AAAAAAAA    
+              AAA           
                 A           
  k    k    k    A     AAAAAA
                 A     A     
